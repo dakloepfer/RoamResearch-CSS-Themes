@@ -167,10 +167,15 @@
 #right-sidebar{
     margin-top: 50px; /*MY CHANGE layout: make right sidebar not too tall*/
     background-color: var(--right-sidebar-background-color) !important;
+    color: var(--main-body-text-color) !important;
 }
 #right-sidebar .rm-reference-container {
     padding-top: 0px;
     border-top: none;
+}
+
+.bp3-button.bp3-minimal.bp3-small {
+    color: var(--main-body-text-color) !important;
 }
 .roam-block .rm-reference-container {
     padding-top: 0px;
@@ -1084,14 +1089,17 @@ textarea {
 
 #roam-right-sidebar-content .rm-level1 .roam-block {
     margin-top: -5px;
+    color: var(--header1-text-color) !important;
 }
 
 #roam-right-sidebar-content .rm-level2 .roam-block {
     margin-top: -5px;
+    color: var(--header2-text-color) !important;
 }
 
 #roam-right-sidebar-content .rm-level3 .roam-block {
     margin-top: -3px;
+    color: var(--header3-text-color) !important;
 }
 
 #roam-right-sidebar-content {
