@@ -15,6 +15,7 @@
     --reference-background-color: #ebf1f5;
     --block-highlight-color: #b0e0ff;/*used when you select a block*/
     --block-highlight-color-in-reference: #96fbaf; /*used when expanding a reference to mark up the original block*/
+    --block-highlight-text-color-in-reference: #444444; /*used for the text color when expanding a reference to mark up the original block*/
     --general-preview-color: #8a9ba8;
     --less-bright-on-dark-text-color: #e1e8ed; /*used in text of help menu*/ 
     --table-border-color: grey;
@@ -30,7 +31,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --main-background-color: rgb(31, 32, 34);
-        --background-color-for-slight-emphasis: rgb(44, 45, 49);
+        --background-color-for-slight-emphasis: rgb(90, 90, 90);
         --left-sidebar-color: rgb(44, 45, 47);
         --left-sidebar-text-and-topbar-button-color: rgb(171, 172, 171);
         --left-sidebar-hover-background-color: rgb(83, 83, 84);
@@ -42,7 +43,8 @@
         --link-text-color: rgb(129, 201, 246); /*#c1605e;*/
         --reference-background-color: rgb(45, 45, 49);
         --block-highlight-color: rgb(57, 63, 72);/*used when you select a block*/
-        --block-highlight-color-in-reference: #96fbaf; /*used when expanding a reference to mark up the original block*/
+        --block-highlight-color-in-reference: rgb(249,255,157); /*used when expanding a reference to mark up the original block*/
+        --block-highlight-text-color-in-reference: rgb(105, 105, 105); /*used for the text color when expanding a reference to mark up the original block*/
         --general-preview-color: rgb(176, 192, 199);
         --less-bright-on-dark-text-color: rgb(217, 216, 217); /*used in text of help menu*/ 
         --table-border-color: grey;
@@ -855,6 +857,7 @@
 }
 .block-highlight-yellow {
     background-color: var(--block-highlight-color-in-reference); /*MY CHANGE colour: change the highlight-colour whenever it usually was yellow (especially when expanding a reference) not yellow, but this custom colour: basically pale green with a bit more blue*/
+    color: var(--block-highlight-text-color-in-reference);
 }
 .block-bullet-view {
     flex: 1 1 100%;
