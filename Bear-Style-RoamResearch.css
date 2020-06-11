@@ -33,7 +33,7 @@
     :root {
         --main-background-color: rgb(31, 32, 34);
         --background-color-for-slight-emphasis: rgb(90, 90, 90);
-        --left-sidebar-color: rgb(44, 45, 47);
+        --left-sidebar-color: rgb(43, 45, 48);
         --left-sidebar-text-and-topbar-button-color: rgb(171, 172, 171);
         --left-sidebar-hover-background-color: rgb(83, 83, 84);
         --right-sidebar-background-color: rgb(45, 45, 49);
@@ -585,6 +585,17 @@
 .rm-find-or-create-wrapper {
     position: relative;
     transition: all 200ms ease-in;
+}
+.bp3-input[type="search"], .bp3-input.bp3-round {
+    background-color: var(--main-background-color);
+    color: var(--main-body-text-color);
+    box-shadow: none;
+} 
+.bp3-input[type="search"]::-webkit-input-placeholder{
+    color: var(--left-sidebar-text-and-topbar-button-color);
+}
+.bp3-icon.bp3-icon-search{
+    color: var(--left-sidebar-text-and-topbar-button-color);
 }
 .rm-find-or-create-wrapper .bp3-input-group .bp3-input:not(:first-child){
     font-size: 16px; /*MY CHANGE font size: made font size in search bar larger*/
