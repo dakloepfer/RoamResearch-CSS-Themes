@@ -1,0 +1,1116 @@
+@import "../fonts/Inter/inter.css";
+
+:root { /*light default colors*/
+    --main-background-color: #fbfbfb;
+    --background-color-for-slight-emphasis: #a7b6c2;
+    --left-sidebar-color: #182026;
+    --left-sidebar-text-and-topbar-button-color: #5c7080;
+    --left-sidebar-hover-background-color: #10161a;
+    --bright-on-dark-text-color: #f5f8fa; /*used in  left sidebar hover text and in eg. the help menu*/
+    --main-body-text-color: #444444;
+    --link-text-color: #cd5654;
+    --reference-background-color: #ebf1f5;
+    --block-highlight-color: #b0e0ff;/*used when you select a block*/
+    --block-highlight-color-in-reference: #96fbaf; /*used when expanding a reference to mark up the original block*/
+    --general-preview-color: #8a9ba8;
+    --less-bright-on-dark-text-color: #e1e8ed; /*used in text of help menu*/ 
+    --table-border-color: grey;
+    --bright-border-color: #bfccd6; /*used in .block-mention but that doesn't seem to do anything*/
+    --bullet-and-checkmark-color: #c75d62;
+    --histogram-table-border-color: #48aff0; /*don't think this is doing anything or I am not using it*/
+    --collaborator-logo-border-color: darkgray; /*the border of the collaborator's logo for histograms and sliders*/
+    --roam-intense-background-color: yellow; /*doesn't seem to do anything*/
+    --roam-highlight-background-color: #fef09f; /*doesn't seem to do anything*/
+    --rm-pm-subeditor-background-color: rgba(201, 201, 207, 0.1); /*doesn't seem to do anything*/
+    --rm-section-selected-background-color: lightblue; /*doesn't seem to do anything*/
+}
+/*Should I ever decide to use Roam for Kanban boards, I need to change the CSS for that, too*/
+.roam-body {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color:var(--main-background-color);
+    /* RTB add: bear color */
+}
+.roam-body .roam-app {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    color: #202b33; /*doesn't seem to do much*/
+}
+.roam-body .roam-app h1 {
+    color: #202b33; /*doesn't seem to do much*/
+}
+.roam-body .roam-app .roam-sidebar-container {
+    position: absolute;
+    top: 45px;
+    left: -232px;
+    width: 232px;
+    bottom: 45px;
+    z-index: 999;
+    transition: all 200ms ease-in;
+    background-color: var(--left-sidebar-color);
+}
+.roam-body .roam-app .roam-sidebar-container .roam-hover-sidebar-reveal {
+    position: absolute;
+    z-index: 99;
+    top: 0px;
+    right: -8px;
+    bottom: 0px;
+    width: 0px;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-topnav {
+    position: absolute;
+    top: 0;
+    padding: 16px;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content {
+    height: 100%;
+    position: relative;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button {
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--left-sidebar-text-and-topbar-button-color);
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
+    color: var(--bright-on-dark-text-color);
+    background-color: var(--left-sidebar-hover-background-color);
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper {
+    color: var(--left-sidebar-text-and-topbar-button-color);
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages {
+    overflow-y: auto;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 0px 8px 4px;
+    color: var(--left-sidebar-text-and-topbar-button-color);
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
+    color: var(--bright-on-dark-text-color);
+    background-color: var(--left-sidebar-hover-background-color);
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .title {
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .roam-sidebar-body {
+    margin-top: 64px;
+    width: 100%;
+    transition: all 150ms ease-in;
+    position: absolute;
+    overflow: scroll;
+}
+.roam-body .roam-app .roam-main {
+    width: 100%;
+    display: flex;
+}
+.roam-body .roam-app .roam-main .roam-article {
+    position: relative;
+    padding: 66px 42px 120px; /*MY CHANGE layout: changed top padding so title is nicer*/
+    font-size: 16px;
+    /* RTB add: larger font. MY CHANGE font size: a bit smaller than that at 16px*/
+    color: var(--main-body-text-color);
+    /* RTB add: roam color */
+}
+.roam-body .roam-app .roam-main .roam-article .rm-title-display {
+    margin-bottom: 32px;
+}
+#right-sidebar{
+  	margin-top: 50px; /*MY CHANGE layout: make right sidebar not too tall*/
+}
+#right-sidebar .rm-reference-container {
+    padding-top: 0px;
+    border-top: none;
+}
+.roam-block .rm-reference-container {
+    padding-top: 0px;
+    border-top: none;
+}
+.roam-block .rm-reference-main {
+    border: 1px solid var(--reference-background-color);
+    padding: 0px 16px 12px 16px;
+}
+.pointer {
+    cursor: pointer;
+}
+.roam-topbar {
+    height: 50px; /*MY CHANGE layout: made this larger (originally 45px)*/
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+    background-color: transparent !important;
+    /* MY CHANGE colour: make transparent */
+    padding-right: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.roam-body-main.flex-h-box{
+    /*height: calc(100%-50px) !important;
+    top: 50px !important;*/
+  	height: 100% !important;
+  	top: 0px !important;
+  	padding-bottom: 0px !important; /*MY CHANGE layout: remove spurious padding*/
+} /*MY CHANGE layout: make main body reach into top bar so it scrolls all the way*/
+
+.bp3-button[class*="bp3-icon-"]::before {
+    font-family: "Icons16",sans-serif;
+    font-size: 18px; /*MY CHANGE layout: made some icons larger, originally this was 18px*/
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: var(--left-sidebar-text-and-topbar-button-color);
+}
+.roam-topbar .flex-h-box {
+    padding-bottom: 0px !important;
+    background-color: rgba(251, 251, 251, 0) !important;
+} /*MY CHANGE layout: elements in top bar are now in the middle of top bar*/
+
+.roam-topbar .flex-h-box div:nth-child(3){
+    flex: 0 0 6px !important;
+}
+.roam-topbar .flex-h-box div:nth-child(5){
+    flex: 0 0 6px !important;
+}
+.roam-topbar .flex-h-box div:nth-last-child(6){
+    flex: 0 0 6px !important;
+}
+.roam-topbar .flex-h-box div:nth-last-child(4){
+    flex: 0 0 6px !important;
+}
+.roam-topbar .flex-h-box div:nth-last-child(2){
+    flex: 0 0 6px !important;
+}
+.roam-topbar .flex-h-box:nth-child(1){
+  flex: 1 1 0px !important;
+}
+
+/*MY CHANGE: icons in top bar are now a bit further apart (originally 4px inlin*/
+
+/*TODO make top of left sidebar nicer and large, even when the sidebar is closed*/
+.roam-sidebar-container.noselect .flex-v-box.roam-sidebar-content .flex-h-box .flex-h-box .bp3-popover-wrapper .bp3-popover-target .bp3-button.bp3-minimal .bp3-icon{
+    height: 30px !important;
+    width: 30px !important;
+} /*MY CHANGE layout: made user icon in sidebar larger (originally 25px)*/
+
+.roam-sidebar-container.noselect .flex-v-box.roam-sidebar-content .flex-h-box .flex-h-box{
+    padding-bottom: 0px !important;
+} /*MY CHANGE: removed padding to move user icon in line*/
+
+
+
+.trunc {
+    max-width: 120px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.roam-popup-container {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+.roam-popup-container .roam-popup-content {
+    position: absolute;
+    top: 34px;
+    bottom: 10px;
+    width: 100%;
+    overflow-y: scroll;
+}
+.rm-input {
+    width: 100%;
+    outline: 1px solid transparent;
+    vertical-align: top;
+    background-color: transparent;
+    border: none;
+    resize: none;
+}
+.rm-input::-webkit-input-placeholder {
+    color: var(--reference-background-color);
+}
+.rm-input:-moz-placeholder {
+    /* Firefox 18- */
+    color: var(--reference-background-color);
+}
+.rm-input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: var(--reference-background-color);
+}
+.rm-input:-ms-input-placeholder {
+    color: var(--reference-background-color);
+}
+.rm-input::placeholder {
+    color: var(--reference-background-color);
+}
+.rm-title-textarea {
+    width: 100%;
+    outline: 1px solid transparent;
+    vertical-align: top;
+    line-height: 1.3em;
+    background-color: transparent;
+    border: none;
+    resize: none;
+}
+.rm-title-textarea::-webkit-input-placeholder {
+    color: var(--reference-background-color);
+}
+.rm-title-textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: var(--reference-background-color);
+}
+.rm-title-textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: var(--reference-background-color);
+}
+.rm-title-textarea:-ms-input-placeholder {
+    color: var(--reference-background-color);
+}
+.rm-title-textarea::placeholder {
+    color: var(--reference-background-color);
+}
+.rm-title-untitled {
+    color: var(--reference-background-color);
+}
+.rm-title-display {
+    line-height: 1.3em;
+    font-weight: 450;
+    word-break: break-word;
+    min-width: 100px;
+    width: 100%;
+    cursor: text;
+    outline: 1px solid transparent;
+}
+.roam-log-container .roam-log-page {
+    border-top: 1px solid var(--main-body-text-color);
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+.roam-log-container .roam-log-page:first-child {
+    border: 0px solid var(--main-body-text-color);
+    margin-top: 0px;
+    min-height: 500px;
+    padding-top: 0px;
+}
+.roam-log-container .roam-log-preview {
+    color: var(--general-preview-color);
+}
+.roam-log-container .roam-log-preview h1 {
+    color: var(--general-preview-color);
+}
+.roam-log-container .roam-log-preview:hover {
+    background-color: var(--general-preview-color);
+}
+#buffer {
+    display: flex;
+    flex-direction: column;
+}
+#buffer .help-title {
+    color: var(--bright-on-dark-text-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+#buffer .help-sub-title {
+    color: var(--less-bright-on-dark-text-color);
+    text-align: center;
+}
+#buffer .help-item-text {
+    color: var(--less-bright-on-dark-text-color);
+}
+#buffer .help-item-label {
+    opacity: 0.6;
+    color: var(--less-bright-on-dark-text-color);
+}
+.roam-table {
+    padding-bottom: 24px;
+    overflow-x: scroll;
+}
+.roam-table th,
+.roam-table td,
+.roam-table tr {
+    font-size: 12px;
+    min-width: 100px;
+    max-height: 20px;
+    padding: 8px 16px;
+    margin: 0p;
+    border: 1px solid var(--table-border-color);
+}
+.roam-table td {
+    max-height: 20px;
+    overflow: scroll;
+}
+.import-table {
+    padding-bottom: 24px;
+    max-width: 100%;
+}
+.import-table table {
+    width: 100%;
+}
+.import-table th,
+.import-table td,
+.import-table tr {
+    font-size: 12px;
+    max-height: 20px;
+    padding: 8px 16px;
+    margin: 0p;
+    border: 1px solid var(--table-border-color);
+}
+.import-table td {
+    max-height: 20px;
+}
+.import-table td .import-preview {
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 50px;
+}
+#info {
+    padding: 8px 0px;
+    margin: 0px 8px;
+    font-size: 12px;
+}
+#info table {
+    margin: 0 auto;
+}
+#info table,
+#info th,
+#info td {
+    padding: 8px;
+    margin: 0p;
+    border: 1px solid var(--table-border-color);
+}
+.hoverparent:hover .hoveronly {
+    opacity: 1;
+}
+.hoveronly {
+    opacity: 0;
+}
+.hoveronly:hover {
+    opacity: 1;
+}
+.tiny {
+    font-size: 7px;
+}
+.CodeMirror {
+    font-family: monospace;
+}
+.CodeMirror .CodeMirror-code pre {
+    font-family: monospace;
+    box-shadow: none;
+}
+.block-mention {
+    margin: 4px 8px 4px 0px;
+    cursor: pointer;
+    padding: 8px;
+    background-color: var(--bright-border-color);
+}
+.block-mention:hover {
+    background-color: var(--background-color-for-slight-emphasis);
+}
+.rm-page-ref {
+    cursor: pointer;
+}
+.rm-page-ref:hover {
+    text-decoration: underline;
+}
+.rm-page-ref-tag {
+    color: var(--background-color-for-slight-emphasis);
+}
+.rm-page-ref-brackets {
+    color: var(--background-color-for-slight-emphasis);
+}
+.rm-page-ref-link-color {
+    color: var(--link-text-color);
+    /*change red graphit color */
+}
+.rm-page-ref-namespace-color {
+    color: green;
+} /*Doesnk't seem to do anything*/
+.rm-block-ref {
+    padding: 4px 2px;
+    margin: -4px 0px;
+    font-size: 18px;
+    /* RTB change: block ref's same size as others. MY CHANGE font size: change it to 18px */
+    display: inline;
+    border-bottom: 1px solid var(--reference-background-color);
+    cursor: alias;
+    padding-left: 0px;
+    /* RTB add: align to left */
+}
+.rm-block-ref:hover {
+    background-color: var(--reference-background-color); /*MY CHANGE colour: make background of block references when hovering over them darker*/
+}
+.rm-reference-container {
+    border-top: none; /*MY CHANGE layout: removed border between body and references*/
+    padding-top: 12px;
+    margin-bottom: 8px;
+}
+.zoom-mentions-view {
+    font-size: 16px /*MY CHANGE font size: made the font size of the previous blocks in the references larger*/
+}
+
+.check-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 16px;
+    /* RTB change: align checkbox for updated spacing. MY CHANGE font size: make it consistent with my changed font size*/
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: bottom;
+    top: -8px;
+    /* RTB change: align checkbox for updated spacing */
+}
+/* Hide the browser's default checkbox */
+.check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 12px;
+    border-radius: 2px;
+    width: 12px;
+    border: 1px solid var(--background-color-for-slight-emphasis);
+}
+/* On mouse-over, add a grey background color */
+/* When the checkbox is checked, add a blue background */
+.check-container input:checked ~ .checkmark {
+    background-color: var(--bullet-and-checkmark-color);
+    /* red graphite */
+    border: none;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+.check-container input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.check-container .checkmark:after {
+    left: 3.5px;
+    top: 0.25px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--main-background-color);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(40deg) scale(0.8);
+}
+#roam-sidebar-logo a {
+    text-decoration: none;
+}
+#roam-sidebar-logo:hover {
+    background-color: var(--left-sidebar-hover-background-color);
+}
+.rm-find-or-create-wrapper {
+    position: relative;
+    transition: all 200ms ease-in;
+}
+.rm-find-or-create-wrapper .bp3-input-group .bp3-input:not(:first-child){
+    font-size: 16px; /*MY CHANGE font size: made font size in search bar larger*/
+}
+.rm-find-or-create-wrapper .bp3-transition-container {
+    width: 100%;
+}
+.rm-find-or-create-wrapper .bp3-menu {
+    max-width: none;
+    max-height: 400px;
+}
+.rm-find-or-create-wrapper .rm-menu-item {
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-title {
+    font-weight: bold;
+}
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-title .rm-new-page {
+    color: #0d8050;
+}
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item {
+    word-break: break-word;
+    color: var(--general-preview-color);
+    overflow-wrap: break-spaces;
+    margin-left: -20px;
+}
+.rm-fill {
+    width: 100%;
+}
+.rm-pages-sort-menu-item {
+    padding-right: 16px;
+    padding-left: 16px;
+    font-weight: bold;
+}
+.rm-pages-row-highlight {
+    background-color: var(--bright-on-dark-text-color);
+}
+.rm-pages-row {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.rm-pages-row .rm-pages-sort-header {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    cursor: pointer;
+}
+.rm-pages-row .rm-pages-sort-header:hover {
+    text-decoration: underline;
+}
+.rm-pages-row .rm-pages-title-col {
+    padding: 8px 4px;
+    flex: 1 0 50%;
+    text-overflow: ellipsis;
+}
+.rm-pages-row .rm-pages-action-col {
+    text-align: right;
+    flex: 1 0 0;
+    padding: 8px 4px;
+}
+.rm-pages-row .rm-pages-col {
+    color: var(--general-preview-color);
+    padding: 8px 4px;
+    flex: 1 0 15%;
+}
+.rm-reference-item {
+    margin-top: 8px;
+    margin-right: 8px;
+    flex: 1 1 100%;
+    word-break: break-word;
+    background-color: var(--reference-background-color); /*MY CHANGE colour: made the background of references a bit darker because the overall background is darker*/
+    padding-right: 8px;
+}
+.rm-level1 {
+    font-family: 'Avenir Next';
+    /* RTB change */
+    font-weight: 400;
+    font-size: 1.8em;
+}
+.rm-level1 textarea {
+    line-height: 1.2;
+}
+.rm-level1 .roam-block {
+    line-height: 1.2;
+    margin-top: -8px;
+    /* RTB add */
+}
+.rm-level2 {
+    font-family: 'Avenir Next' !important;
+    /* RTB change */
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+/* RTB new section */
+.rm-level2 .roam-block {
+    margin-top: -8px;
+}
+
+.rm-level3 {
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--left-sidebar-text-and-topbar-button-color);
+}
+
+/* RTB new section */
+.rm-level3 .roam-block {
+    margin-top: -5px;
+}
+
+.rm-title1 {
+    word-break: break-word;
+    font-weight: 400;
+}
+.rm-histogram-table {
+    width: 100%;
+    margin-left: -8px;
+    box-sizing: border-box;
+}
+.rm-histogram-table td {
+    vertical-align: top;
+    min-width: 18px;
+    max-width: 18px;
+    border: 1px solid transparent;
+}
+.rm-histogram-table td .flex-v-box {
+    border-right: 0.2px solid var(--histogram-table-border-color);
+    justify-content: flex-start;
+    align-items: center;
+}
+.rm-histogram-table td .flex-v-box .bp3-popover-wrapper {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.rm-histogram-table td .flex-v-box .table-edited-by-view {
+    transform-origin: center;
+    background-size: cover;
+    border: 1px solid var(--collaborator-logo-border-color);
+    font-size: 0.7em;
+    height: 12px;
+    width: 12px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+}
+.slider .slider-cell {
+    border: 1px solid transparent;
+    flex: "1 0 100%";
+}
+.slider .flex-v-box {
+    justify-content: flex-start;
+    align-items: center;
+}
+.slider .flex-v-box .bp3-popover-wrapper {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.slider .flex-v-box .table-edited-by-view {
+    transform-origin: center;
+    background-size: cover;
+    border: 1px solid var(--collaborator-logo-border-color);
+    font-size: 0.7em;
+    height: 12px;
+    width: 12px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+}
+.nowrap {
+    white-space: nowrap;
+}
+#rm-mobile-bar .rm-mobile-button {
+    flex: 1 0 0;
+}
+.roam-intense {
+    background-color: var(--roam-intense-background-color);
+    margin: -2px;
+    padding: 2px;
+}
+.roam-highlight {
+    background-color: var(--roam-highlight-background-color);
+    margin: -2px;
+    padding: 2px;
+}
+.roam-bullet-closed {
+    background-color: var(--reference-background-color);
+}
+#right-sidebar .roam-bullet-closed {
+    background-color: var(--background-color-for-slight-emphasis);
+}
+.level1 {
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    color: var(--main-body-text-color);
+    letter-spacing: normal;
+    /*-ms-font-feature-settings:    'ss20' 1;*/
+}
+.rm-pm-editor {
+    padding: 5px;
+    min-height: 100px;
+    outline: 0 !important;
+}
+.rm-pm-editor h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.8em;
+}
+.rm-pm-editor h1 textarea {
+    line-height: 1.2;
+}
+.rm-pm-editor h1 .roam-block {
+    line-height: 1.2;
+}
+.rm-pm-editor h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+.rm-pm-editor h3 {
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--left-sidebar-text-and-topbar-button-color);
+}
+.rm-pm-editor img {
+    max-width: 100%;
+}
+.rm-pm-sub-editor-wrapper {
+    padding: 2.5px;
+    margin: 2px;
+    background-color: var(--rm-pm-subeditor-background-color);
+}
+.rm-section-item {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+.rm-section {
+    background-color: var(--roam-intense-background-color);
+}
+.rm-section-selected {
+    background-color: var(--rm-section-selected-background-color);
+}
+.rm-edit-view-wrapper {
+    min-width: 21px;
+}
+.edited-by-view {
+    flex: 0 0 21px;
+    transform-origin: center;
+    background-size: cover;
+    border: 1px solid var(--collaborator-logo-border-color);
+    font-size: 0.7em;
+    margin-top: 6.5px;
+    margin-right: 6px;
+    margin-left: 0px;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+}
+.roam-block-container {
+    max-width: 740px;
+    border-radius: 2px;
+}
+.block-highlight-grey {
+    background-color: var(--reference-background-color);
+}
+.block-highlight-blue {
+    background-color: var(--block-highlight-color); /*MY CHANGE colour: made blue highlights a bit fainter*/
+}
+.block-highlight-yellow {
+    background-color: var(--block-highlight-color-in-reference); /*MY CHANGE colour: change the highlight-colour whenever it usually was yellow (especially when expanding a reference) not yellow, but this custom colour: basically pale green with a bit more blue*/
+}
+.block-bullet-view {
+    flex: 1 1 100%;
+    margin-left: 5px;
+}
+/*.block-border-left {
+    border-left: 1px solid #bfccd6; RTB: Remove left-side vertical lines  
+}DOESN'T SEEM TO DO ANYTHING */
+.text-align-left {
+    text-align: left;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-justify {
+    text-align: justify;
+}
+.roam-block {
+    min-height: calc(1.5em + 8px);
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    margin-top: -1px;
+    min-width: 100px;
+    width: 100%;
+    line-height: 1.5em;
+    cursor: text;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.roam-block .span-view {
+    box-sizing: border-box;
+}
+.rm-block-text {
+    max-width: 700px;
+    /* RTB change: desired section width */
+}
+.rm-block-input {
+    line-height: 1.5em;
+    width: 100%;
+    outline: 1px solid transparent;
+    overflow-wrap: break-spaces;
+    vertical-align: top;
+    margin-top: -1px;
+    background-color: transparent;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    letter-spacing: inherit;
+    border: none;
+    resize: none;
+}
+.controls {
+    display: flex;
+    flex: 0 0 40px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+.controls .block-expand {
+    transform: scale(1);
+    transform-origin: center;
+}
+.controls .block-expand .rm-caret {
+    transition: all 100ms ease-in;
+}
+.controls .block-expand .rm-rotate-90 {
+    transform: rotate(-90deg);
+}
+.controls .opacity-none {
+    opacity: 0;
+}
+.controls .opacity-7 {
+    opacity: 0.7;
+}
+.controls .cursor-pointer {
+    cursor: pointer;
+}
+.controls .cursor-grab {
+    cursor: grab;
+}
+.controls .bk-light-grey {
+    background-color: var(--reference-background-color);
+}
+.controls .simple-bullet-outer {
+    display: flex;
+    height: 13px;
+    width: 13px;
+    margin-top: 4.3px;
+    /* RTB change: center bullet to match font sizing */
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.controls .simple-bullet-outer .simple-bullet-inner {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--bullet-and-checkmark-color);
+    /* RTB change: red graphite bullet */
+}
+
+
+
+.rm-mentions-search-items {
+    padding: 8px;
+}
+.rm-mentions-search-items .rm-mentions-title {
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 4px;
+}
+.rm-mentions-search-items .rm-mentions-search-item {
+    padding: 12px;
+    cursor: pointer;
+    background-color: var(--bright-on-dark-text-color);
+    border: 1px solid var(--bright-border-color);
+}
+.rm-mentions-search-items .rm-mentions-search-item:hover {
+    background-color: var(--bright-border-color);
+}
+.block-ref-count-button {
+    font-size: 0.9em;
+}
+.rm-grey-text {
+    color: var(--general-preview-color);
+}
+.rm-red-text {
+    color: red;
+}
+.flex-v-box {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+}
+.flex-h-box {
+    display: flex;
+    flex: 0 0 auto;
+    padding-bottom: 10px;
+    /* RTB add: a little extra space between bullets */
+}
+.flex-align-start {
+    align-items: flex-start;
+}
+.flex-justify-start {
+    justify-content: flex-start;
+}
+.tags-input {
+    display: inline-block;
+    width: 10em;
+    margin: 0 0 4px;
+    padding: 4px 6px;
+    background: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    text-shadow: none;
+}
+.tags-input:focus {
+    /* box-shadow: 0 0 5px rgba(81, 203, 238, 1); */
+    /* border: 2px solid white; */
+    /* border-bottom-color: #448cca; */
+}
+.tags-output {
+    display: inline-block;
+    margin-left: 4px;
+}
+.tags-output-item {
+    display: inline-block;
+    background-color: lightgrey;
+    cursor: pointer;
+    margin: 0 4px 4px 0;
+    padding: 4px 6px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+.tags-output-item2 {
+    background-color: black;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 6px;
+}
+html {
+    margin: 0;
+    min-height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    font-family: 'Avenir Next';
+    /* RTB change: desired font (bear) */
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0px;
+    padding: 0px;
+}
+textarea {
+    font-family: 'Avenir Next';
+    /* RTB change: desired font (bear) */
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0px;
+    padding: 0px;
+}
+.xtra {
+    transform: scale(3);
+    border-radius: 50%;
+    padding: 4px;
+}
+.border {
+    border: 1px solid;
+}
+.display-flex {
+    display: -webkit-flex;
+    display: flex;
+}
+.display-inline-flex {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+.react-resizable {
+    position: relative;
+}
+.react-resizable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDYiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiNmZmZmZmYwMCIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iNnB4Ij48ZyBvcGFjaXR5PSIwLjMwMiI+PHBhdGggZD0iTSA2IDYgTCAwIDYgTCAwIDQuMiBMIDQgNC4yIEwgNC4yIDQuMiBMIDQuMiAwIEwgNiAwIEwgNiA2IEwgNiA2IFoiIGZpbGw9IiMwMDAwMDAiLz48L2c+PC9zdmc+');
+    background-position: bottom right;
+    padding: 0 3px 3px 0;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    box-sizing: border-box;
+    cursor: se-resize;
+}
+.resize-card {
+    overflow-y: hidden;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently */
+}
+
+/* RTB additions below */
+#roam-right-sidebar-content span.simple-bullet-outer.cursor-grab {
+    margin-top: 3px;
+}
+
+#roam-right-sidebar-content .block-bullet-view .simple-bullet-outer {
+    margin-top: 3px;
+}
+
+#roam-right-sidebar-content .rm-level1 .roam-block {
+    margin-top: -5px;
+}
+
+#roam-right-sidebar-content .rm-level2 .roam-block {
+    margin-top: -5px;
+}
+
+#roam-right-sidebar-content .rm-level3 .roam-block {
+    margin-top: -3px;
+}
+
+#roam-right-sidebar-content {
+    font-size: 16px;
+}
+
+#roam-right-sidebar-content .rm-block-ref {
+    font-size: 14px;
+    /* make block ref in side-bar a little smaller to show that's it's a reference */
+    /* color: #cd5654; Don't change color of full block ref */
+}
+
+a {
+    color: var(--link-text-color);
+    /* red graphite color */
+}
