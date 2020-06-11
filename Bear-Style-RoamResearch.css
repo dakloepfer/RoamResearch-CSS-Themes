@@ -175,7 +175,7 @@
 }
 
 .bp3-button.bp3-minimal.bp3-small {
-    color: var(--main-body-text-color) !important;
+    color: var(--left-sidebar-text-and-topbar-button-color) !important;
 }
 .roam-block .rm-reference-container {
     padding-top: 0px;
@@ -218,6 +218,9 @@
     line-height: 1;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    color: var(--left-sidebar-text-and-topbar-button-color);
+}
+.bp3-icon-filter::before {
     color: var(--left-sidebar-text-and-topbar-button-color);
 }
 .roam-topbar .flex-h-box {
