@@ -166,7 +166,7 @@
 }
 #right-sidebar{
     margin-top: 50px; /*MY CHANGE layout: make right sidebar not too tall*/
-    background-color: var(--right-sidebar-background-color);
+    background-color: var(--right-sidebar-background-color) !important;
 }
 #right-sidebar .rm-reference-container {
     padding-top: 0px;
