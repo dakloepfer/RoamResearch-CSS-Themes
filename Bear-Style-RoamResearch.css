@@ -778,7 +778,7 @@
     padding: 2px;
 }
 .roam-bullet-closed {
-    background-color: var(--reference-background-color);
+    background-color: var(--background-color-for-slight-emphasis);
 }
 #right-sidebar .roam-bullet-closed {
     background-color: var(--background-color-for-slight-emphasis);
