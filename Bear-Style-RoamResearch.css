@@ -19,6 +19,7 @@
     --block-highlight-text-color-in-reference: #444444; /*used for the text color when expanding a reference to mark up the original block*/
     --general-preview-color: #8a9ba8;
     --less-bright-on-dark-text-color: #e1e8ed; /*used in text of help menu*/ 
+    --vertical-lines-left-of-blocks-color: #bfccd6;
     --table-border-color: grey;
     --bright-border-color: #bfccd6; /*used in .block-mention but that doesn't seem to do anything*/
     --bullet-and-checkmark-color: #c75d62;
@@ -36,7 +37,7 @@
         --left-sidebar-color: rgb(43, 45, 48);
         --left-sidebar-text-and-topbar-button-color: rgb(171, 172, 171);
         --left-sidebar-hover-background-color: rgb(83, 83, 84);
-        --right-sidebar-background-color: rgb(45, 45, 49);
+        --right-sidebar-background-color: rgb(43, 45, 48);
         --bright-on-dark-text-color: rgb(217, 216, 218); /*used in  left sidebar hover text and in eg. the help menu*/
         --main-body-text-color: rgb(221, 221, 221);
         --header1-text-color: rgb(206, 218, 228);
@@ -49,6 +50,7 @@
         --block-highlight-text-color-in-reference: rgb(105, 105, 105); /*used for the text color when expanding a reference to mark up the original block*/
         --general-preview-color: rgb(176, 192, 199);
         --less-bright-on-dark-text-color: rgb(217, 216, 217); /*used in text of help menu*/ 
+        --vertical-lines-left-of-blocks-color: rgb(91, 91, 91);
         --table-border-color: grey;
         --bright-border-color: #bfccd6; /*used in .block-mention but that doesn't seem to do anything*/
         --bullet-and-checkmark-color: rgb(97, 168, 244);
@@ -122,6 +124,10 @@
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper {
     color: var(--left-sidebar-text-and-topbar-button-color);
 }
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper div:first-child:not(.page) {
+    background-color: var(--left-sidebar-text-and-topbar-button-color) !important;
+}
+
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages {
     overflow-y: auto;
 }
@@ -885,9 +891,9 @@
     flex: 1 1 100%;
     margin-left: 5px;
 }
-/*.block-border-left {
-    border-left: 1px solid #bfccd6; RTB: Remove left-side vertical lines  
-}DOESN'T SEEM TO DO ANYTHING */
+.block-border-left { /*vertical lines left of the blocks*/
+    border-left: 1px solid var(--vertical-lines-left-of-blocks-color); 
+}
 .text-align-left {
     text-align: left;
 }
