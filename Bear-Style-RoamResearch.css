@@ -69,6 +69,9 @@
         --rm-pm-subeditor-background-color: rgba(201, 201, 207, 0.1); /*doesn't seem to do anything*/
         --rm-section-selected-background-color: lightblue; /*doesn't seem to do anything*/
     }
+    #buffer > div {
+        background-color: var(--menu-background-color);
+    }
   }
 
 
@@ -183,6 +186,11 @@
     background-color: var(--right-sidebar-background-color) !important;
     color: var(--main-body-text-color) !important;
 }
+
+#right-sidebar > .flex-h-box {
+    background-color: var(--main-body-background-color);
+}
+
 #right-sidebar .rm-reference-container {
     padding-top: 0px;
     border-top: none;
@@ -383,6 +391,8 @@
     display: flex;
     flex-direction: column;
 }
+
+
 #buffer .help-title {
     color: var(--bright-on-dark-text-color);
     text-align: center;
