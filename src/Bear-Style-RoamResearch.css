@@ -16,8 +16,8 @@
     --link-text-color: #cd5654;
     --reference-background-color: #ebf1f5;
     --block-highlight-color: #b0e0ff;/*used when you select a block*/
-    --block-highlight-color-in-reference: #96fbaf; /*used when expanding a reference to mark up the original block*/
-    --block-highlight-text-color-in-reference: #444444; /*used for the text color when expanding a reference to mark up the original block*/
+    --roam-highlight-color: #96fbaf; /*used as background when highlighting*/
+    --roam-highlight-text-color: #444444; /*used for the text color text is being highlighted, for light mode same as main body text*/
     --highlight-text-color-in-search: #8a9ba8;
     --general-preview-color: #8a9ba8;
     --selected-result-background-color: rgb(213, 218, 223);
@@ -30,7 +30,6 @@
     --histogram-table-border-color: #48aff0; /*don't think this is doing anything or I am not using it*/
     --collaborator-logo-border-color: darkgray; /*the border of the collaborator's logo for histograms and sliders*/
     --roam-intense-background-color: yellow; /*doesn't seem to do anything*/
-    --roam-highlight-background-color: #fef09f; /*doesn't seem to do anything*/
     --rm-pm-subeditor-background-color: rgba(201, 201, 207, 0.1); /*doesn't seem to do anything*/
     --rm-section-selected-background-color: lightblue; /*doesn't seem to do anything*/
 }
@@ -51,8 +50,8 @@
         --link-text-color: rgb(129, 201, 246); /*#c1605e;*/
         --reference-background-color: rgb(45, 45, 49);
         --block-highlight-color: rgb(57, 63, 72);/*used when you select a block*/
-        --block-highlight-color-in-reference: rgb(249,255,157); /*used when expanding a reference to mark up the original block*/
-        --block-highlight-text-color-in-reference: rgb(105, 105, 105); /*used for the text color when expanding a reference to mark up the original block*/
+        --roam-highlight-color: rgb(249,255,157); /*used as background when highlighting*/
+        --roam-text-highlight-color: rgb(105, 105, 105); /*used for the text color text is being highlighted*/
         --highlight-text-color-in-search: rgb(105, 105, 105);
         --general-preview-color: rgb(176, 192, 199);
         --selected-result-background-color: rgb(83, 83, 84);
@@ -65,7 +64,6 @@
         --histogram-table-border-color: #48aff0; /*don't think this is doing anything or I am not using it*/
         --collaborator-logo-border-color: darkgray; /*the border of the collaborator's logo for histograms and sliders*/
         --roam-intense-background-color: yellow; /*doesn't seem to do anything*/
-        --roam-highlight-background-color: #fef09f; /*doesn't seem to do anything*/
         --rm-pm-subeditor-background-color: rgba(201, 201, 207, 0.1); /*doesn't seem to do anything*/
         --rm-section-selected-background-color: lightblue; /*doesn't seem to do anything*/
     }
@@ -83,7 +81,12 @@
     .bp3-elevation-3 {
         box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
     }
-
+    .bp3-dialog {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+    }
+    .bp3-toast {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+    }
 
   }
 
@@ -689,7 +692,7 @@
     margin-left: -20px;
 }
 .rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item span[style="background-color: yellow;"]{
-    background-color: var(--block-highlight-color-in-reference) !important;
+    background-color: var(--roam-highlight-color) !important;
     color: var(--highlight-text-color-in-search);
 }
 .rm-fill {
@@ -856,6 +859,7 @@
 }
 .roam-highlight {
     background-color: var(--roam-highlight-background-color);
+    color: var(--roam-highlight-text-color);
     margin: -2px;
     padding: 2px;
 }
@@ -946,8 +950,8 @@
     background-color: var(--block-highlight-color); /*MY CHANGE colour: made blue highlights a bit fainter*/
 }
 .block-highlight-yellow {
-    background-color: var(--block-highlight-color-in-reference); /*MY CHANGE colour: change the highlight-colour whenever it usually was yellow (especially when expanding a reference) not yellow, but this custom colour: basically pale green with a bit more blue*/
-    color: var(--block-highlight-text-color-in-reference);
+    background-color: var(--roam-highlight-color); /*MY CHANGE colour: change the highlight-colour whenever it usually was yellow (especially when expanding a reference) not yellow, but this custom colour: basically pale green with a bit more blue*/
+    color: var(--roam-text-highlight-color);
 }
 .block-bullet-view {
     flex: 1 1 100%;
