@@ -858,7 +858,7 @@
     padding: 2px;
 }
 .roam-highlight {
-    background-color: var(--roam-highlight-background-color);
+    background-color: var(--roam-highlight-color);
     color: var(--roam-highlight-text-color);
     margin: -2px;
     padding: 2px;
