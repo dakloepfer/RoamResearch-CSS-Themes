@@ -7,6 +7,7 @@
     --left-sidebar-text-and-topbar-button-color: #5c7080;
     --left-sidebar-hover-background-color: #10161a;
     --right-sidebar-background-color: rgb(216, 225, 232);
+    --menu-background-color: #fbfbfb;
     --bright-on-dark-text-color: #f5f8fa; /*used in  left sidebar hover text and in eg. the help menu*/
     --main-body-text-color: #444444;
     --header1-text-color: #202b33;
@@ -17,7 +18,10 @@
     --block-highlight-color: #b0e0ff;/*used when you select a block*/
     --block-highlight-color-in-reference: #96fbaf; /*used when expanding a reference to mark up the original block*/
     --block-highlight-text-color-in-reference: #444444; /*used for the text color when expanding a reference to mark up the original block*/
+    --highlight-text-color-in-search: #8a9ba8;
     --general-preview-color: #8a9ba8;
+    --selected-search-result-background-color: rgb(213, 218, 223);
+    --create-new-page-in-search-text-color: #0d8050;
     --less-bright-on-dark-text-color: #e1e8ed; /*used in text of help menu*/ 
     --vertical-lines-left-of-blocks-color: #bfccd6;
     --table-border-color: grey;
@@ -38,6 +42,7 @@
         --left-sidebar-text-and-topbar-button-color: rgb(171, 172, 171);
         --left-sidebar-hover-background-color: rgb(83, 83, 84);
         --right-sidebar-background-color: rgb(43, 45, 48);
+        --menu-background-color: rgb(56, 56, 56);
         --bright-on-dark-text-color: rgb(217, 216, 218); /*used in  left sidebar hover text and in eg. the help menu*/
         --main-body-text-color: rgb(221, 221, 221);
         --header1-text-color: rgb(206, 218, 228);
@@ -48,7 +53,10 @@
         --block-highlight-color: rgb(57, 63, 72);/*used when you select a block*/
         --block-highlight-color-in-reference: rgb(249,255,157); /*used when expanding a reference to mark up the original block*/
         --block-highlight-text-color-in-reference: rgb(105, 105, 105); /*used for the text color when expanding a reference to mark up the original block*/
+        --highlight-text-color-in-search: rgb(105, 105, 105);
         --general-preview-color: rgb(176, 192, 199);
+        --selected-search-result-background-color: rgb(83, 83, 84);
+        --create-new-page-in-search-text-color: #0d8050;
         --less-bright-on-dark-text-color: rgb(217, 216, 217); /*used in text of help menu*/ 
         --vertical-lines-left-of-blocks-color: rgb(91, 91, 91);
         --table-border-color: grey;
@@ -124,7 +132,7 @@
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper {
     color: var(--left-sidebar-text-and-topbar-button-color);
 }
-.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper div:first-child:not(.page) {
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper > div:first-child {
     background-color: var(--left-sidebar-text-and-topbar-button-color) !important;
 }
 
@@ -234,22 +242,22 @@
     background-color: rgba(251, 251, 251, 0) !important;
 } /*MY CHANGE layout: elements in top bar are now in the middle of top bar*/
 
-.roam-topbar .flex-h-box div:nth-child(3){
+.roam-topbar .flex-h-box > div:nth-child(3){
     flex: 0 0 6px !important;
 }
-.roam-topbar .flex-h-box div:nth-child(5){
+.roam-topbar .flex-h-box > div:nth-child(5){
     flex: 0 0 6px !important;
 }
-.roam-topbar .flex-h-box div:nth-last-child(6){
+.roam-topbar .flex-h-box > div:nth-last-child(6){
     flex: 0 0 6px !important;
 }
-.roam-topbar .flex-h-box div:nth-last-child(4){
+.roam-topbar .flex-h-box > div:nth-last-child(4){
     flex: 0 0 6px !important;
 }
-.roam-topbar .flex-h-box div:nth-last-child(2){
+.roam-topbar .flex-h-box > div:nth-last-child(2){
     flex: 0 0 6px !important;
 }
-.roam-topbar .flex-h-box:nth-child(1){
+.roam-topbar .flex-h-box > div:nth-child(1){
   flex: 1 1 0px !important;
 }
 
@@ -257,8 +265,8 @@
 
 /*TODO make top of left sidebar nicer and large, even when the sidebar is closed*/
 .roam-sidebar-container.noselect .flex-v-box.roam-sidebar-content .flex-h-box .flex-h-box .bp3-popover-wrapper .bp3-popover-target .bp3-button.bp3-minimal .bp3-icon{
-    height: 30px !important;
-    width: 30px !important;
+    height: 25px !important;
+    width: 25px !important;
 } /*MY CHANGE layout: made user icon in sidebar larger (originally 25px)*/
 
 .roam-sidebar-container.noselect .flex-v-box.roam-sidebar-content .flex-h-box .flex-h-box{
@@ -519,6 +527,11 @@
     font-size: 16px /*MY CHANGE font size: made the font size of the previous blocks in the references larger*/
 }
 
+.bp3-dialog {
+    background-color: var(--menu-background-color) !important;
+    color: var(--main-body-text-color) !important;
+}
+
 .check-container {
     display: inline-block;
     position: relative;
@@ -606,6 +619,30 @@
 .rm-find-or-create-wrapper .bp3-input-group .bp3-input:not(:first-child){
     font-size: 16px; /*MY CHANGE font size: made font size in search bar larger*/
 }
+
+.bp3-transition-container{
+    background-color: var(--menu-background-color);
+}
+
+.bp3-menu {
+    background-color: var(--menu-background-color);
+    color: var(--main-body-text-color);
+}
+
+
+.bp3-popover-content{
+    background-color: var(--menu-background-color) !important;
+    color: var(--main-body-text-color) !important;
+}
+.rm-menu-item {
+    background-color: var(--menu-background-color);
+    color: var(--main-body-text-color);
+}
+.bp3-menu-item {
+    background-color: var(--menu-background-color);
+    color: var(--main-body-text-color);
+}
+
 .rm-find-or-create-wrapper .bp3-transition-container {
     width: 100%;
 }
@@ -621,14 +658,21 @@
 .rm-find-or-create-wrapper .rm-menu-item .rm-search-title {
     font-weight: bold;
 }
+.rm-find-or-create-wrapper .bp3-menu div[style="background-color: rgb(213, 218, 223);"] {
+    background-color: var(--selected-search-result-background-color) !important;
+}
 .rm-find-or-create-wrapper .rm-menu-item .rm-search-title .rm-new-page {
-    color: #0d8050;
+    color: var(--create-new-page-in-search-text-color);
 }
 .rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item {
     word-break: break-word;
     color: var(--general-preview-color);
     overflow-wrap: break-spaces;
     margin-left: -20px;
+}
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item span[style="background-color: yellow;"]{
+    background-color: var(--block-highlight-color-in-reference) !important;
+    color: var(--highlight-text-color-in-search);
 }
 .rm-fill {
     width: 100%;
