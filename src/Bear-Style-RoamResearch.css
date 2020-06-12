@@ -6,6 +6,7 @@
     --left-sidebar-color: #182026;
     --left-sidebar-text-and-topbar-button-color: #5c7080;
     --left-sidebar-hover-background-color: #10161a;
+    --button-hover-background-color: rgba(167,182,194,0.3);
     --right-sidebar-background-color: rgb(216, 225, 232);
     --menu-background-color: #fbfbfb;
     --bright-on-dark-text-color: #f5f8fa; /*used in  left sidebar hover text and in eg. the help menu*/
@@ -40,6 +41,7 @@
         --left-sidebar-color: rgb(43, 45, 48);
         --left-sidebar-text-and-topbar-button-color: rgb(171, 172, 171);
         --left-sidebar-hover-background-color: rgb(83, 83, 84);
+        --button-hover-background-color: rgba(167,182,194,0.3);
         --right-sidebar-background-color: rgb(43, 45, 48);
         --menu-background-color: rgb(56, 56, 56);
         --bright-on-dark-text-color: rgb(217, 216, 218); /*used in  left sidebar hover text and in eg. the help menu*/
@@ -249,6 +251,20 @@
   	padding-bottom: 0px !important; /*MY CHANGE layout: remove spurious padding*/
 } /*MY CHANGE layout: make main body reach into top bar so it scrolls all the way*/
 
+/*MY CHANGE: mainly for date picker*/
+.bp3-button:not([class*="bp3-intent-"]){
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+
+}
+.bp3-button:not([class*="bp3-intent-"]):hover{
+    background-color: var(--button-hover-background-color);
+}
+
+.bp3-button.bp3-minimal:hover {
+    background-color: var(--button-hover-background-color);
+}
 .bp3-button[class*="bp3-icon-"]::before {
     font-family: "Icons16",sans-serif;
     font-size: 18px; /*MY CHANGE layout: made some icons larger, originally this was 18px*/
