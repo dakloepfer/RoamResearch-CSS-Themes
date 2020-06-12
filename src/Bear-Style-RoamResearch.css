@@ -20,7 +20,7 @@
     --block-highlight-text-color-in-reference: #444444; /*used for the text color when expanding a reference to mark up the original block*/
     --highlight-text-color-in-search: #8a9ba8;
     --general-preview-color: #8a9ba8;
-    --selected-search-result-background-color: rgb(213, 218, 223);
+    --selected-result-background-color: rgb(213, 218, 223);
     --create-new-page-in-search-text-color: #0d8050;
     --less-bright-on-dark-text-color: #e1e8ed; /*used in text of help menu*/ 
     --vertical-lines-left-of-blocks-color: #bfccd6;
@@ -55,7 +55,7 @@
         --block-highlight-text-color-in-reference: rgb(105, 105, 105); /*used for the text color when expanding a reference to mark up the original block*/
         --highlight-text-color-in-search: rgb(105, 105, 105);
         --general-preview-color: rgb(176, 192, 199);
-        --selected-search-result-background-color: rgb(83, 83, 84);
+        --selected-result-background-color: rgb(83, 83, 84);
         --create-new-page-in-search-text-color: #0d8050;
         --less-bright-on-dark-text-color: rgb(217, 216, 217); /*used in text of help menu*/ 
         --vertical-lines-left-of-blocks-color: rgb(91, 91, 91);
@@ -615,6 +615,17 @@
     font-size: 16px; /*MY CHANGE font size: made font size in search bar larger*/
 }
 
+.bp3-elevation-3 {
+    background-color: var(--menu-background-color) !important;
+    color: var(--main-body-text-color) !important;
+}
+.bp3-elevation-3 div[style*="background-color: rgb(213, 218, 223);"]{
+    background-color: var(--selected-result-background-color) !important;
+}
+.bp3-elevation-3 span[style="color: rgb(129, 145, 157);"]{
+    color: var(--general-preview-color) !important;
+}
+
 .bp3-transition-container{
     background-color: var(--menu-background-color);
 }
@@ -654,7 +665,7 @@
     font-weight: bold;
 }
 .rm-find-or-create-wrapper .bp3-menu div[style="background-color: rgb(213, 218, 223);"] {
-    background-color: var(--selected-search-result-background-color) !important;
+    background-color: var(--selected-result-background-color) !important;
 }
 .rm-find-or-create-wrapper .rm-menu-item .rm-search-title .rm-new-page {
     color: var(--create-new-page-in-search-text-color);
