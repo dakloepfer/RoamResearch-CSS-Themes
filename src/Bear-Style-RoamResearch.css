@@ -259,6 +259,7 @@
 .roam-sidebar-container.noselect .flex-v-box.roam-sidebar-content .flex-h-box .flex-h-box .bp3-popover-wrapper .bp3-popover-target .bp3-button.bp3-minimal .bp3-icon{
     height: 25px !important;
     width: 25px !important;
+    border: 1px solid var(--left-sidebar-text-and-topbar-button-color) !important;
 } /*MY CHANGE layout: made user icon in sidebar larger (originally 25px)*/
 
 .roam-sidebar-container.noselect .flex-v-box.roam-sidebar-content .flex-h-box .flex-h-box{
