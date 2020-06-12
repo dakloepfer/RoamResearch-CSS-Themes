@@ -92,7 +92,7 @@
         box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
     }
 
-  }
+}
 
 /*the code mirror is still bright, but I don't want to spend days on fixing that only for it to break with the next update - the only thing I use the code mirror for is to inject my own CSS - who in their right mind would put significant amounts of code into Roam*/
 
@@ -282,7 +282,7 @@
 }
 
 .bp3-datepicker {
-    background-color: var(--menu-background-color);
+    background: var(--menu-background-color);
     color: var(--main-body-text-color);
 }
 .bp3-datepicker .DayPicker-Day:hover{
@@ -694,6 +694,13 @@
     background-color: var(--menu-background-color) !important;
     color: var(--main-body-text-color) !important;
 }
+.bp3-popover .bp3-popover-arrow-fill {
+    fill: var(--menu-background-color);
+}
+.bp3-tooltip .bp3-popover-arrow-fill {
+    fill: var(--menu-background-color);
+}
+
 .rm-menu-item {
     background-color: var(--menu-background-color);
     color: var(--main-body-text-color);
