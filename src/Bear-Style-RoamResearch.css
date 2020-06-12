@@ -21,6 +21,7 @@
     --roam-highlight-text-color: #444444; /*used for the text color text is being highlighted, for light mode same as main body text*/
     --highlight-text-color-in-search: #8a9ba8;
     --general-preview-color: #8a9ba8;
+    --date-picker-preview-color: rgba(24, 32, 38, 0.6); /*main body text color at 0.6 opacity*/
     --selected-result-background-color: rgb(213, 218, 223);
     --create-new-page-in-search-text-color: #0d8050;
     --less-bright-on-dark-text-color: #e1e8ed; /*used in text of help menu*/ 
@@ -56,6 +57,7 @@
         --roam-text-highlight-color: rgb(105, 105, 105); /*used for the text color text is being highlighted*/
         --highlight-text-color-in-search: rgb(105, 105, 105);
         --general-preview-color: rgb(176, 192, 199);
+        --date-picker-preview-color: rgba(221, 221, 221, 0.6); /*main body text color at 0.6 opacity*/
         --selected-result-background-color: rgb(83, 83, 84);
         --create-new-page-in-search-text-color: #0d8050;
         --less-bright-on-dark-text-color: rgb(217, 216, 217); /*used in text of help menu*/ 
@@ -278,6 +280,27 @@
 .bp3-icon-filter::before {
     color: var(--left-sidebar-text-and-topbar-button-color);
 }
+
+.bp3-datepicker {
+    background-color: var(--menu-background-color);
+    color: var(--main-body-text-color);
+}
+.bp3-datepicker .DayPicker-Day:hover{
+    background-color: var(--button-hover-background-color);
+}
+.bp3-datepicker .DayPicker-Day.DayPicker-Day--outside{
+    color: var(--date-picker-preview-color);
+}
+.bp3-html-select.bp3-minimal select, .bp3-select.bp3-minimal select{
+    color: var(--main-body-text-color);
+} /*for all select boxes, but mainly used for picking months and years in the date picker */
+.bp3-html-select.bp3-minimal select:hover, .bp3-select.bp3-minimal select:hover{
+    color: var(--main-body-text-color);
+}
+.DayPicker .bp3-icon>svg:not([fill]){
+    fill: var(--left-sidebar-text-and-topbar-button-color);
+}
+
 .roam-topbar .flex-h-box {
     padding-bottom: 0px !important;
     background-color: transparent !important;
