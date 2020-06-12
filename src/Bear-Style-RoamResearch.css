@@ -265,7 +265,7 @@
 .roam-topbar .flex-h-box > div:nth-last-child(2){
     flex: 0 0 6px !important;
 }
-.roam-topbar .flex-h-box > div:nth-child(1){
+.roam-topbar .flex-h-box > div:nth-child(1):not(.rm-saving-inner-icon){
   flex: 1 1 0px !important;
 }
 
