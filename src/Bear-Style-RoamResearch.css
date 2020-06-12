@@ -247,28 +247,12 @@
 }
 .roam-topbar .flex-h-box {
     padding-bottom: 0px !important;
-    background-color: rgba(251, 251, 251, 0) !important;
+    background-color: transparent !important;
 } /*MY CHANGE layout: elements in top bar are now in the middle of top bar*/
 
-.roam-topbar .flex-h-box > div:nth-child(3){
+.roam-topbar .flex-h-box > div[style="flex: 0 0 4px;"]{
     flex: 0 0 6px !important;
 }
-.roam-topbar .flex-h-box > div:nth-child(5){
-    flex: 0 0 6px !important;
-}
-.roam-topbar .flex-h-box > div:nth-last-child(6){
-    flex: 0 0 6px !important;
-}
-.roam-topbar .flex-h-box > div:nth-last-child(4){
-    flex: 0 0 6px !important;
-}
-.roam-topbar .flex-h-box > div:nth-last-child(2){
-    flex: 0 0 6px !important;
-}
-.roam-topbar .flex-h-box > div:nth-child(1):not(.rm-saving-inner-icon){
-  flex: 1 1 0px !important;
-}
-
 /*MY CHANGE: icons in top bar are now a bit further apart (originally 4px inlin*/
 
 /*TODO make top of left sidebar nicer and large, even when the sidebar is closed*/
