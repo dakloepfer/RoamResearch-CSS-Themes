@@ -69,11 +69,25 @@
         --rm-pm-subeditor-background-color: rgba(201, 201, 207, 0.1); /*doesn't seem to do anything*/
         --rm-section-selected-background-color: lightblue; /*doesn't seem to do anything*/
     }
-    #buffer > div {
+    #buffer > div { /*help menu*/
         background-color: var(--menu-background-color);
     }
+
+    /*MY CHANGE: fix box shadows in dark mode*/
+    .bp3-popover {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+    }
+    .bp3-tooltip {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+    }
+    .bp3-elevation-3 {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+    }
+
+
   }
 
+/*the code mirror is still bright, but I don't want to spend days on fixing that only for it to break with the next update - the only thing I use the code mirror for is to inject my own CSS - who in their right mind would put significant amounts of code into Roam*/
 
 /*Should I ever decide to use Roam for Kanban boards, I need to change the CSS for that, too*/
 .roam-body {
@@ -265,8 +279,6 @@
 .roam-sidebar-container.noselect .flex-v-box.roam-sidebar-content .flex-h-box .flex-h-box{
     padding-bottom: 0px !important;
 } /*MY CHANGE: removed padding to move user icon in line*/
-
-
 
 .trunc {
     max-width: 120px;
