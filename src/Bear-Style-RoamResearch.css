@@ -266,6 +266,7 @@
 }
 .bp3-button:not([class*="bp3-intent-"]):hover{
     background-color: var(--button-hover-background-color);
+    box-shadow: none;
 }
 
 .bp3-button.bp3-minimal:hover {
