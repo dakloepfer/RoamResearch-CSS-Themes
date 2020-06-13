@@ -16,6 +16,9 @@
     --header3-text-color: #60707e;
     --link-text-color: #cd5654;
     --reference-background-color: #ebf1f5;
+    --block-embed-level1-background-color: #ebf1f5;
+    --block-embed-level2-background-color: #f5f8fa;
+    --block-embed-level3-background-color: #ced9e0;
     --block-highlight-color: #b0e0ff;/*used when you select a block*/
     --roam-highlight-color: #96fbaf; /*used as background when highlighting*/
     --roam-highlight-text-color: #444444; /*used for the text color text is being highlighted, for light mode same as main body text*/
@@ -53,6 +56,9 @@
         --header3-text-color: rgb(206, 218, 228);
         --link-text-color: rgb(129, 201, 246); /*#c1605e;*/
         --reference-background-color: rgb(45, 45, 49);
+        --block-embed-level1-background-color: rgb(45, 45, 49);
+        --block-embed-level2-background-color: rgb(38, 38, 41);
+        --block-embed-level3-background-color: rgb(60, 60, 64);
         --block-highlight-color: rgb(57, 63, 72);/*used when you select a block*/
         --roam-highlight-color: rgb(249,255,157); /*used as background when highlighting*/
         --roam-text-highlight-color: rgb(105, 105, 105); /*used for the text color text is being highlighted*/
@@ -224,6 +230,16 @@
 #right-sidebar .rm-reference-container {
     padding-top: 0px;
     border-top: none;
+}
+
+.rm-embed-container {
+    background-color: var(--block-embed-level1-background-color);
+}
+.rm-embed-container .rm-embed-container {
+    background-color: var(--block-embed-level1-background-color);
+}
+.rm-embed-container .rm-embed-container .rm-embed-container{
+    background-color: var(--block-embed-level3-background-color);
 }
 
 .bp3-button.bp3-minimal.bp3-small {
