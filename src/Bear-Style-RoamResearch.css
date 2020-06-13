@@ -176,6 +176,13 @@
     color: var(--bright-on-dark-text-color);
     background-color: var(--left-sidebar-hover-background-color);
 }
+.roam-sidebar-content .bp3-button.bp3-minimal.bp3-icon-plus:hover::before{
+    color: var(--bright-on-dark-text-color); 
+}
+.roam-sidebar-content .bp3-button.bp3-minimal.bp3-icon-plus:hover{
+    background-color: transparent;
+}
+
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .title {
     padding: 8px;
     margin-bottom: 8px;
