@@ -236,7 +236,7 @@
     background-color: var(--block-embed-level1-background-color);
 }
 .rm-embed-container .rm-embed-container {
-    background-color: var(--block-embed-level1-background-color);
+    background-color: var(--block-embed-level2-background-color);
 }
 .rm-embed-container .rm-embed-container .rm-embed-container{
     background-color: var(--block-embed-level3-background-color);
