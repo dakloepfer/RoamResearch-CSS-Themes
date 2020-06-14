@@ -38,6 +38,8 @@
     --roam-intense-background-color: yellow; /*doesn't seem to do anything*/
     --rm-pm-subeditor-background-color: rgba(201, 201, 207, 0.1); /*doesn't seem to do anything*/
     --rm-section-selected-background-color: lightblue; /*doesn't seem to do anything*/
+
+    --main-body-font-size: 16px; /*used for most text font sizes*/
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -55,8 +57,8 @@
         --header2-text-color: rgb(206, 218, 228);
         --header3-text-color: rgb(206, 218, 228);
         --link-text-color: rgb(129, 201, 246); /*#c1605e;*/
-        --reference-background-color: rgb(45, 45, 49);
-        --block-embed-level1-background-color: rgb(45, 45, 49);
+        --reference-background-color: rgb(43, 45, 48);
+        --block-embed-level1-background-color: rgb(43, 45, 48);
         --block-embed-level2-background-color: rgb(38, 38, 41);
         --block-embed-level3-background-color: rgb(60, 60, 64);
         --block-highlight-color: rgb(57, 63, 72);/*used when you select a block*/
@@ -78,6 +80,8 @@
         --roam-intense-background-color: yellow; /*doesn't seem to do anything*/
         --rm-pm-subeditor-background-color: rgba(201, 201, 207, 0.1); /*doesn't seem to do anything*/
         --rm-section-selected-background-color: lightblue; /*doesn't seem to do anything*/
+
+        --main-body-font-size: 16px; /*used for most text font sizes*/
     }
     #buffer > div { /*help menu*/
         background-color: var(--menu-background-color);
@@ -174,7 +178,7 @@
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
     text-decoration: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: var(--main-body-font-size);
     padding: 8px 0px 8px 4px;
     color: var(--left-sidebar-text-and-topbar-button-color);
 }
@@ -195,6 +199,7 @@
     font-size: 14px;
     font-weight: bold;
 }
+
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .roam-sidebar-body {
     margin-top: 64px;
     width: 100%;
@@ -209,7 +214,7 @@
 .roam-body .roam-app .roam-main .roam-article {
     position: relative;
     padding: 66px 42px 120px; /*MY CHANGE layout: changed top padding so title is nicer*/
-    font-size: 16px;
+    font-size: var(--main-body-font-size);
     /* RTB add: larger font. MY CHANGE font size: a bit smaller than that at 16px*/
     color: var(--main-body-text-color);
     /* RTB add: roam color */
@@ -466,7 +471,7 @@
 #buffer .help-title {
     color: var(--bright-on-dark-text-color);
     text-align: center;
-    font-size: 16px;
+    font-size: var(--main-body-font-size);
     font-weight: bold;
 }
 #buffer .help-sub-title {
@@ -587,7 +592,7 @@
 .rm-block-ref {
     padding: 4px 2px;
     margin: -4px 0px;
-    font-size: 18px;
+    font-size: var(--main-body-font-size);
     /* RTB change: block ref's same size as others. MY CHANGE font size: change it to 18px */
     display: inline;
     border-bottom: 1px solid var(--reference-background-color);
@@ -598,6 +603,18 @@
 .rm-block-ref:hover {
     background-color: var(--reference-background-color); /*MY CHANGE colour: make background of block references when hovering over them darker*/
 }
+
+#roam-right-sidebar-content .rm-block-ref {
+    font-size: var(--main-body-font-size);
+    border-bottom: 1px solid var(--left-sidebar-hover-background-color);
+    /* make block ref in side-bar a little smaller to show that's it's a reference */
+    /* color: #cd5654; Don't change color of full block ref */
+}
+#roam-right-sidebar-content .rm-block-ref:hover {
+    background-color: var(--left-sidebar-hover-background-color); /*MY CHANGE colour: make background of block references when hovering over them darker*/
+}
+
+
 .rm-reference-container {
     border-top: none; /*MY CHANGE layout: removed border between body and references*/
     padding-top: 12px;
@@ -697,7 +714,7 @@
     color: var(--left-sidebar-text-and-topbar-button-color);
 }
 .rm-find-or-create-wrapper .bp3-input-group .bp3-input:not(:first-child){
-    font-size: 16px; /*MY CHANGE font size: made font size in search bar larger*/
+    font-size: var(--main-body-font-size); /*MY CHANGE font size: made font size in search bar larger*/
 }
 
 .bp3-elevation-3 {
@@ -1267,14 +1284,9 @@ textarea {
 }
 
 #roam-right-sidebar-content {
-    font-size: 16px;
+    font-size: var(--main-body-font-size);
 }
 
-#roam-right-sidebar-content .rm-block-ref {
-    font-size: 14px;
-    /* make block ref in side-bar a little smaller to show that's it's a reference */
-    /* color: #cd5654; Don't change color of full block ref */
-}
 
 a {
     color: var(--link-text-color);
