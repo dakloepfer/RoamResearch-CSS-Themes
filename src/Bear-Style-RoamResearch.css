@@ -590,7 +590,7 @@
     color: green;
 } /*Doesnk't seem to do anything*/
 .rm-block-ref {
-    padding: 4px 2px;
+    padding: 1px 2px;
     margin: -4px 0px;
     font-size: var(--main-body-font-size);
     /* RTB change: block ref's same size as others. MY CHANGE font size: change it to 18px */
