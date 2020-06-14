@@ -592,7 +592,7 @@
 .rm-block-ref {
     padding: 1px 2px;
     margin: -4px 0px;
-    font-size: var(--main-body-font-size);
+    font-size: 1em;
     /* RTB change: block ref's same size as others. MY CHANGE font size: change it to 18px */
     display: inline;
     border-bottom: 1px solid var(--reference-background-color);
@@ -605,7 +605,7 @@
 }
 
 #roam-right-sidebar-content .rm-block-ref {
-    font-size: var(--main-body-font-size);
+    font-size: 1em;
     border-bottom: 1px solid var(--left-sidebar-hover-background-color);
     /* make block ref in side-bar a little smaller to show that's it's a reference */
     /* color: #cd5654; Don't change color of full block ref */
