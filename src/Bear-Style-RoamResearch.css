@@ -755,6 +755,14 @@
     fill: var(--menu-background-color);
 }
 
+.bp3-popover-content .rm-line {
+    border-top: 1px solid var(--main-body-text-color);
+}
+
+.bp3-popover-content .bp3-button {
+    color: var(--main-body-text-color);
+}
+
 .rm-menu-item {
     background-color: var(--menu-background-color);
     color: var(--main-body-text-color);
