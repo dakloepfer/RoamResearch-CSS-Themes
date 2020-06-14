@@ -258,6 +258,11 @@
     border: 1px solid var(--reference-background-color);
     padding: 0px 16px 12px 16px;
 }
+
+.zoom-path-view .rm-zoom-mask { /*when looking at an individual block, this is the background of the previous blocks above*/
+    background-color: var(--main-background-color);
+}
+
 .pointer {
     cursor: pointer;
 }
