@@ -80,7 +80,7 @@
         --roam-intense-background-color: yellow; /*doesn't seem to do anything*/
         --rm-pm-subeditor-background-color: rgba(201, 201, 207, 0.1); /*doesn't seem to do anything*/
         --rm-section-selected-background-color: lightblue; /*doesn't seem to do anything*/
-        --dark-mode-divider-line-color: rgba(171, 172, 171, 0.4)
+        --dark-mode-divider-line-color: rgba(171, 172, 171, 0.4);
 
         --main-body-font-size: 16px; /*used for most text font sizes*/
     }
@@ -108,7 +108,7 @@
     .bp3-menu-header {
         border-top-color: var(--dark-mode-divider-line-color);
     }
-    .roam-right-sidebar-content >div[style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(138, 155, 168); margin-left: 16px; margin-right: 16px;"]{
+    .roam-right-sidebar-content div[style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(138, 155, 168); margin-left: 16px; margin-right: 16px;"]{
         border-bottom-color: var(--dark-mode-divider-line-color);
     }
 
@@ -779,7 +779,7 @@
     background-color: var(--menu-background-color);
     color: var(--main-body-text-color);
 }
-.rm-graph-dropdown a{
+.roam-sidebar-container .rm-graph-dropdown a{
     color: var(--main-body-text-color);
 }
 
