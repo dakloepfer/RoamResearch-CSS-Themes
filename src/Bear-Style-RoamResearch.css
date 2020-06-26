@@ -108,8 +108,8 @@
     .bp3-menu-header {
         border-top-color: var(--dark-mode-divider-line-color);
     }
-    .roam-right-sidebar-content div[style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(138, 155, 168); margin-left: 16px; margin-right: 16px;"]{
-        border-bottom-color: var(--dark-mode-divider-line-color);
+    #roam-right-sidebar-content div{
+        border-bottom-color: var(--dark-mode-divider-line-color) !important;
     }
 
 }
