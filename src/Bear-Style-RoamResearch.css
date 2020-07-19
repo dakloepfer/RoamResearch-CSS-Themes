@@ -176,11 +176,19 @@
     color: var(--bright-on-dark-text-color);
     background-color: var(--left-sidebar-hover-background-color);
 }
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .shortcut {
+    opacity: 55%;
+    font-size: var(--main-body-font-size);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper {
     color: var(--left-sidebar-text-and-topbar-button-color);
 }
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper > div:first-child {
-    background-color: var(--left-sidebar-text-and-topbar-button-color) !important;
+    /*background-color: var(--left-sidebar-text-and-topbar-button-color) !important;*/
 }
 
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages {
@@ -190,7 +198,7 @@
     text-decoration: none;
     cursor: pointer;
     font-size: var(--main-body-font-size);
-    padding: 8px 0px 8px 4px;
+    padding: 8px 0px 8px 1em;
     color: var(--left-sidebar-text-and-topbar-button-color);
 }
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
