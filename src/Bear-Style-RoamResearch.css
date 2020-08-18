@@ -741,6 +741,13 @@
     font-size: var(--main-body-font-size); /*MY CHANGE font size: made font size in search bar larger*/
 }
 
+.bp3-input .bp3-minimal .search-input {
+    background-color: var(--menu-background-color);
+    box-shadow: none;
+    color: inherit;
+    margin: 4px !important;
+}
+
 .bp3-elevation-3 {
     background-color: var(--menu-background-color) !important;
     color: var(--main-body-text-color) !important;
@@ -775,7 +782,8 @@
 }
 
 .bp3-popover-content .rm-line {
-    border-top: 1px solid var(--main-body-text-color);
+    border-top: 1px solid;
+    border-color: var(--main-body-text-color) !important;
 }
 
 .bp3-popover-content .bp3-button {
