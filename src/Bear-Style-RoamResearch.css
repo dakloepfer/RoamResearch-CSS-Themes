@@ -741,7 +741,7 @@
     font-size: var(--main-body-font-size); /*MY CHANGE font size: made font size in search bar larger*/
 }
 
-.bp3-input .bp3-minimal .search-input {
+.bp3-input.bp3-minimal.search-input {
     background-color: var(--menu-background-color);
     box-shadow: none;
     color: inherit;
