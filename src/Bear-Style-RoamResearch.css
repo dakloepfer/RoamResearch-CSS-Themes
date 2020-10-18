@@ -278,6 +278,11 @@
     padding: 0px 16px 12px 16px;
 }
 
+.rm-inline-references{
+    background-color: var(--reference-background-color);
+    border-left: 2px solid #8A9BA8; /*Might change the colour of this, but for now this looks decent*/
+}
+
 .zoom-path-view .rm-zoom-mask { /*when looking at an individual block, this is the background of the previous blocks above*/
     background-color: var(--main-background-color);
 }
