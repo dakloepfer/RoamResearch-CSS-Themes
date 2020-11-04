@@ -248,7 +248,7 @@
 }
 
 #right-sidebar > .flex-h-box {
-    background-color: var(--main-background-color);
+    background-color: transparent;
 }
 
 #right-sidebar .rm-reference-container {
