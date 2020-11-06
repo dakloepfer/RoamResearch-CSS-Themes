@@ -226,6 +226,11 @@
     position: absolute;
     overflow: scroll;
 }
+
+#rm-log-container {
+    height: 120%;
+}
+
 .roam-body .roam-app .roam-main {
     width: 100%;
     display: flex;
