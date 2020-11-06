@@ -317,8 +317,8 @@
   	padding-bottom: 0px !important; /*MY CHANGE layout: remove spurious padding*/
 } /*MY CHANGE layout: make main body reach into top bar so it scrolls all the way*/
 
-.roam-app .flex-h-box{
-    height: 200% !important;
+.roam-app > .flex-h-box{
+    height: calc(100% + 60px) !important;
 }
 
 /*MY CHANGE: mainly for date picker*/
