@@ -317,7 +317,9 @@
   	padding-bottom: 0px !important; /*MY CHANGE layout: remove spurious padding*/
 } /*MY CHANGE layout: make main body reach into top bar so it scrolls all the way*/
 
-
+.roam-app.flex-h-box{
+    height: 120% !important;
+}
 
 /*MY CHANGE: mainly for date picker*/
 .bp3-button:not([class*="bp3-intent-"]){
