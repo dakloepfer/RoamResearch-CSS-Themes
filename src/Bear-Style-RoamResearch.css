@@ -7,6 +7,7 @@
     --left-sidebar-text-and-topbar-button-color: #5c7080;
     --left-sidebar-hover-background-color: #10161a;
     --button-hover-background-color: rgba(167,182,194,0.3);
+    --collapsed-bullet-background-color: #CED9E0;
     --right-sidebar-background-color: rgb(216, 225, 232);
     --menu-background-color: #fbfbfb;
     --bright-on-dark-text-color: #f5f8fa; /*used in  left sidebar hover text and in eg. the help menu*/
@@ -49,6 +50,7 @@
         --left-sidebar-text-and-topbar-button-color: rgb(171, 172, 171);
         --left-sidebar-hover-background-color: rgb(83, 83, 84);
         --button-hover-background-color: rgba(167,182,194,0.3);
+        --collapsed-bullet-background-color: rgba(167,182,194,0.6);
         --right-sidebar-background-color: rgb(43, 45, 48);
         --menu-background-color: rgb(56, 56, 56);
         --bright-on-dark-text-color: rgb(217, 216, 218); /*used in  left sidebar hover text and in eg. the help menu*/
@@ -387,6 +389,8 @@
 }
 /*MY CHANGE: icons in top bar are now a bit further apart (originally 4px inlin*/
 
+
+
 /*TODO make top of left sidebar nicer and large, even when the sidebar is closed*/
 .roam-sidebar-container.noselect .flex-v-box.roam-sidebar-content .flex-h-box .flex-h-box .bp3-popover-wrapper .bp3-popover-target .bp3-button.bp3-minimal .bp3-icon{
     height: 25px !important;
@@ -652,6 +656,11 @@
 }
 #roam-right-sidebar-content .rm-block-ref:hover {
     background-color: var(--button-hover-background-color); /*MY CHANGE colour: make background of block references when hovering over them darker*/
+}
+
+.rm-bullet.rm-bullet--closed .rm-bullet__inner{
+    box-sizing: content-box;
+    border: 4px solid var(--collapsed-bullet-background-color) !important;
 }
 
 
