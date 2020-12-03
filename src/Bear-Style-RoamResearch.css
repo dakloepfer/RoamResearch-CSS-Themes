@@ -50,7 +50,7 @@
         --left-sidebar-text-and-topbar-button-color: rgb(171, 172, 171);
         --left-sidebar-hover-background-color: rgb(83, 83, 84);
         --button-hover-background-color: rgba(167,182,194,0.3);
-        --collapsed-bullet-background-color: rgba(167,182,194,0.6);
+        --collapsed-bullet-background-color:rgba(206, 218, 228, 0.65);
         --right-sidebar-background-color: rgb(43, 45, 48);
         --menu-background-color: rgb(56, 56, 56);
         --bright-on-dark-text-color: rgb(217, 216, 218); /*used in  left sidebar hover text and in eg. the help menu*/
