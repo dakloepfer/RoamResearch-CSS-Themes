@@ -17,6 +17,8 @@
     --header3-text-color: #60707e;
     --link-text-color: #cd5654;
     --reference-background-color: #ebf1f5;
+    --block-quote-background-color: #ebf1f5;
+    --block-quote-left-border-color: #394B59;
     --block-embed-level1-background-color: #ebf1f5;
     --block-embed-level2-background-color: #f5f8fa;
     --block-embed-level3-background-color: #ced9e0;
@@ -60,6 +62,8 @@
         --header3-text-color: rgb(206, 218, 228);
         --link-text-color: rgb(129, 201, 246); /*#c1605e;*/
         --reference-background-color: rgb(43, 45, 48);
+        --block-quote-background-color: rgb(43, 45, 48);
+        --block-quote-left-border-color: #394B59;
         --block-embed-level1-background-color: rgb(43, 45, 48);
         --block-embed-level2-background-color: rgb(38, 38, 41);
         --block-embed-level3-background-color: rgb(60, 60, 64);
@@ -656,6 +660,12 @@
 }
 #roam-right-sidebar-content .rm-block-ref:hover {
     background-color: var(--button-hover-background-color); /*MY CHANGE colour: make background of block references when hovering over them darker*/
+}
+
+.rm-bq {
+    background-color: var(--block-quote-background-color) !important;
+    border-left: 5px solid var(--block-quote-border-color) !important;
+    font-size: var(--main-body-font-size) !important;
 }
 
 .rm-bullet.rm-bullet--closed .rm-bullet__inner{
