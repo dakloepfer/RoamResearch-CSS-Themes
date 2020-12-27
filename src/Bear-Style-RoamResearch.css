@@ -634,6 +634,10 @@
     color: var(--link-text-color);
     /*change red graphit color */
 }
+.rm-page-ref--link {
+    color: var(--link-text-color) !important;
+    /*change red graphit color */
+}
 .rm-page-ref-namespace-color {
     color: green;
 } /*Doesnk't seem to do anything*/
