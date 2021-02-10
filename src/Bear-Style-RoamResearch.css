@@ -19,6 +19,7 @@
     --header3-text-color: #60707e;
     --link-text-color: #cd5654;
     --reference-background-color: #ebf1f5;
+    --reference-text-color: #444444;
     --block-quote-background-color: #ebf1f5;
     --block-quote-left-border-color: #394B59;
     --block-embed-level1-background-color: #ebf1f5;
@@ -66,6 +67,7 @@
         --header3-text-color: rgb(206, 218, 228);
         --link-text-color: rgb(129, 201, 246); /*#c1605e;*/
         --reference-background-color: rgb(43, 45, 48);
+        --reference-text-color: rgb(221, 221, 221);
         --block-quote-background-color: rgb(43, 45, 48);
         --block-quote-left-border-color: #394B59;
         --block-embed-level1-background-color: rgb(43, 45, 48);
@@ -841,6 +843,10 @@
 .rm-help-popup__drag-handle{
     background-color: var(--menu-background-color) !important; 
 }
+.rm-help-results .rm-help-categories .rm-help-category-menu-item:hover{
+    background: var(--button-hover-background-color) !important;
+}
+
 .rm-help-search__icon-container{
     background-color: var(--menu-background-color) !important; 
     border: 1px solid transparent !important;
@@ -854,6 +860,7 @@
 }
 .rm-help-results{
     background-color: var(--menu-background-color) !important;
+    color: var(--main-body-text-color) !important;
 }
 .rm-help-results .rm-help-categories{
     border-right: 1px solid var(--divider-line-color) !important;
@@ -873,6 +880,38 @@
 .rm-help-results .rm-help-functions .rm-help-function__shortcut{
     color: var(--main-body-text-color) !important;
 }
+
+.rm-help-results .rm-help-functions .rm-help-markdown-function__style{
+    color: var(--main-body-text-color) !important;
+}
+.rm-help-results .rm-help-functions .rm-help-markdown-function__markdown{
+    color: var(--main-body-text-color) !important;
+}
+.rm-help-resource__title{
+    color: var(--main-body-text-color) !important;
+}
+.rm-help-resource__description{
+    color: var(--main-body-text-color) !important;
+}
+.rm-help-resource__icon{
+    background-color: transparent !important;
+    color: var(--main-body-text-color) !important;
+}
+.rm-help-resource:hover{
+    background-color: var(--button-hover-background-color) !important;
+}
+.rm-help-component__title{
+    color: var(--main-body-text-color) !important;
+}
+.rm-help-component__description{
+    color: var(--main-body-text-color) !important;
+}
+.rm-help-component__notation{
+    background: var(--reference-background-color) !important;
+    color: var(--reference-text-color) !important;
+}
+
+
 .rm-menu-item {
     background-color: var(--menu-background-color);
     color: var(--main-body-text-color);
@@ -1002,6 +1041,7 @@
     word-break: break-word;
     background-color: var(--reference-background-color); /*MY CHANGE colour: made the background of references a bit darker because the overall background is darker*/
     padding-right: 8px;
+    color: var(--reference-text-color) !important;
 }
 .rm-level1 {
     font-family: 'Avenir Next';
