@@ -931,6 +931,9 @@
     background: transparent !important;
     box-shadow: none !important;
     color: var(--main-body-text-color) !important;
+    border-radius: 0px !important;
+    border-bottom: 1px solid var(--divider-line-color) !important;
+
 }
 .rm-search-path .rm-search-path-query-input-group .rm-search-path-query-input::-webkit-input-placeholder {
     color: var(--reference-background-color);
