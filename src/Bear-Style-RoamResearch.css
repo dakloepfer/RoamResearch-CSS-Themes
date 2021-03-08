@@ -74,7 +74,7 @@
         --block-embed-level2-background-color: rgb(38, 38, 41);
         --block-embed-level3-background-color: rgb(60, 60, 64);
         --block-highlight-color: rgb(57, 63, 72);/*used when you select a block*/
-        --roam-highlight-color: rgb(249,255,157); /*used as background when highlighting*/
+        --roam-highlight-color: #00897B; /*used as background when highlighting*/
         --roam-text-highlight-color: rgb(105, 105, 105); /*used for the text color text is being highlighted*/
         --highlight-text-color-in-search: rgb(105, 105, 105);
         --general-preview-color: rgb(176, 192, 199);
