@@ -931,7 +931,7 @@
 .rm-command-palette__scroll-container .bp3-menu .rm-menu-item--active{
     background-color: var(--selected-result-background-color) !important;
 }
-.rm-command-palette__scroll-container:hover {
+.rm-menu-item .bp3-menu-item .rm-menu-item--active:hover {
     background-color: var(--left-sidebar-hover-background-color) !important;
 }
 
