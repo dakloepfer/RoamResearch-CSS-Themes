@@ -772,7 +772,7 @@
     transition: all 200ms ease-in;
 }
 .bp3-input[type="search"], .bp3-input.bp3-round {
-    background-color: var(--main-background-color);
+    background-color: transparent !important;
     color: var(--main-body-text-color);
     box-shadow: none;
 } 
@@ -926,6 +926,13 @@
 }
 .roam-sidebar-container .rm-graph-dropdown a{
     color: var(--main-body-text-color);
+}
+
+.rm-command-palette__scroll-container .bp3-menu .rm-menu-item--active{
+    background-color: var(--selected-result-background-color) !important;
+}
+.rm-command-palette__scroll-container:hover {
+    background-color: var(--left-sidebar-hover-background-color) !important;
 }
 
 .rm-multibar {
