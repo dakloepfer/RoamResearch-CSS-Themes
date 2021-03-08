@@ -935,6 +935,10 @@
     background-color: var(--left-sidebar-hover-background-color) !important;
 }
 
+.rm-user-settings .rm-display-name-settings__input {
+    background-color: transparent !important;
+}
+
 .rm-multibar {
     border-right: 1px solid var(--divider-line-color) !important;
 }
@@ -1075,7 +1079,10 @@
     /* RTB change */
     font-weight: 400;
     font-size: 1.4em;
-    color: var(--header2-text-color)
+    color: var(--header2-text-color);
+}
+.level2 {
+    color: var(--header2-text-color) !important;
 }
 
 /* RTB new section */
@@ -1087,6 +1094,9 @@
     font-weight: 500;
     font-size: 1.2em;
     color: var(--header3-text-color);
+}
+.rm-graph-settings .level3 {
+    color: red !important;
 }
 
 /* RTB new section */
