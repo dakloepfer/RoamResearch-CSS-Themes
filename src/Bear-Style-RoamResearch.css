@@ -131,6 +131,10 @@
 
 /*the code mirror is still bright, but I don't want to spend days on fixing that only for it to break with the next update - the only thing I use the code mirror for is to inject my own CSS - who in their right mind would put significant amounts of code into Roam*/
 
+.rm-files-dropzone{
+    position: fixed !important;
+}
+
 /*Should I ever decide to use Roam for Kanban boards, I need to change the CSS for that, too*/
 .roam-body {
     height: 100vh;
