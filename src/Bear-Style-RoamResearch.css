@@ -239,10 +239,6 @@
     overflow: scroll;
 }
 
-#rm-log-container {
-    height: 120%;
-}
-
 .roam-body .roam-app .roam-main {
     width: 100%;
     display: flex;
@@ -1391,7 +1387,7 @@
 .flex-h-box {
     display: flex;
     flex: 0 0 auto;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     /* RTB add: a little extra space between bullets */
 }
 .flex-align-start {
