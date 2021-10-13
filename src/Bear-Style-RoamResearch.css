@@ -131,10 +131,6 @@
 
 /*the code mirror is still bright, but I don't want to spend days on fixing that only for it to break with the next update - the only thing I use the code mirror for is to inject my own CSS - who in their right mind would put significant amounts of code into Roam*/
 
-.rm-topbar{
-    position: fixed !important;
-}
-
 /*Should I ever decide to use Roam for Kanban boards, I need to change the CSS for that, too*/
 .roam-body {
     height: 100vh;
@@ -333,9 +329,9 @@
   	padding-bottom: 0px !important; /*MY CHANGE layout: remove spurious padding*/
 } /*MY CHANGE layout: make main body reach into top bar so it scrolls all the way*/
 
-.roam-app > .flex-h-box{
+/* .roam-app > .flex-h-box{
     height: calc(100% + 60px) !important;
-}
+} */
 
 /*MY CHANGE: mainly for date picker*/
 .bp3-button:not([class*="bp3-intent-"]){
